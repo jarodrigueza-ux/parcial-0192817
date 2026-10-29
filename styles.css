@@ -114,3 +114,140 @@ ul { list-style: none; }
 .nav a.active { color: var(--blue); font-weight: 600; }
 .nav__criterio { color: var(--blue); font-weight: 600; }
 
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 50px 40px 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.eyebrow span { width: 24px; height: 2px; background: var(--blue); }
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(56px, 7vw, 88px);
+  line-height: .95;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.hero__lead {
+  margin-top: 28px;
+  max-width: 380px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 32px;
+}
+.btn {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 3px;
+  display: inline-flex;
+  gap: 14px;
+  transition: transform .15s, background .15s;
+}
+.btn:hover { background: #1a37d4; transform: translateY(-2px); }
+.link {
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Escena visual */
+.hero__visual {
+  background: #ebe6d8;
+  padding: 8px;
+  border-radius: 4px;
+}
+.scene {
+  position: relative;
+  height: 520px;
+  background: linear-gradient(180deg, #0b1230 0%, #14235a 60%, #1c3a7a 100%);
+  border: 2px solid var(--ink);
+  overflow: hidden;
+}
+
+.tag {
+  position: absolute;
+  top: 14px; left: 14px;
+  z-index: 3;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 6px 10px;
+  transform: rotate(-2deg);
+}
+
+.moon {
+  position: absolute;
+  top: 40px; right: -60px;
+  width: 340px; height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f4f1e8, #b9bdd1 60%, #6b78a8);
+  box-shadow: 0 0 80px rgba(180, 200, 255, .35);
+}
+
+.mountains {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 55%;
+  background: linear-gradient(160deg, #3d5fb0 0%, #1d3270 55%, #0b1230 100%);
+  clip-path: polygon(0 55%, 12% 40%, 22% 60%, 35% 25%, 48% 55%, 60% 30%, 72% 50%, 85% 20%, 100% 45%, 100% 100%, 0 100%);
+}
+
+/* Portada del cómic */
+.cover {
+  position: absolute;
+  top: 36px; left: 18%;
+  z-index: 2;
+  width: 190px; height: 270px;
+  background: #f3efe6;
+  padding: 12px;
+  transform: rotate(-4deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+}
+.cover__author { font-size: 8px; letter-spacing: 1px; text-align: center; text-transform: uppercase; }
+.cover__title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: .9;
+  text-align: center;
+  color: var(--blue);
+  margin: 4px 0 8px;
+}
+.cover__art {
+  flex: 1;
+  background: linear-gradient(180deg, #0b1230, #2c4a9a);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.cover__pub { font-size: 7px; text-align: center; margin-top: 6px; letter-spacing: 1px; }
+
