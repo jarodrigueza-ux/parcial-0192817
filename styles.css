@@ -399,3 +399,48 @@ ul { list-style: none; }
 .logo--footer .logo__dot { background: var(--yellow); width: 7px; height: 7px; margin-bottom: 5px; }
 .footer__bottom p, .footer__bottom a:not(.logo) { color: #dbe1ff; font-size: 8px; }
 .footer__bottom > div { display: flex; gap: 17px; }
+
+@media (max-width: 900px) {
+  .section { padding-left: 20px; padding-right: 20px; }
+  .book-grid { gap: 15px; }
+  .book-cover { height: 220px; }
+  .recommendation-layout { grid-template-columns: 1.2fr 1fr; }
+  .editor-pick { grid-template-columns: 135px 1fr; gap: 15px; padding: 14px; }
+  .editor-cover { width: 125px; height: 185px; }
+  }
+
+  @media (max-width: 700px) {
+  .section { padding: 44px 20px 48px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .section-heading h2 { font-size: 39px; }
+  .book-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 25px; }
+  .book-cover { height: clamp(190px, 55vw, 260px); }
+  .book-cover strong { font-size: clamp(25px, 7vw, 35px); }
+  .universes { padding: 37px 20px; }
+  .universes__heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .universe-grid { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
+  .universe-item { min-height: 95px; margin-right: 12px; padding-right: 10px; }
+  .universe-item:nth-child(2n) { border-right: 0; margin-right: 0; }
+  .recommendation-layout { grid-template-columns: 1fr; }
+  .editor-pick { grid-template-columns: minmax(105px, .7fr) 1.3fr; }
+  .editor-cover { width: 115px; height: 175px; }
+  .editor-copy h3 { font-size: 27px; }
+  .you-may-like { padding: 17px; }
+  .footer { padding: 34px 20px 0; }
+  .footer__main { grid-template-columns: 1fr; gap: 25px; padding-bottom: 27px; }
+  .newsletter { justify-self: stretch; max-width: none; }
+  .footer__bottom { flex-wrap: wrap; padding: 14px 0; }
+}
+@media (max-width: 420px) {
+  .book-cover { height: 190px; }
+  .book-info h3 { font-size: 18px; }
+  .editor-pick { grid-template-columns: 95px 1fr; gap: 12px; padding: 12px; }
+  .editor-cover { width: 91px; height: 145px; padding: 16px 7px 8px; }
+  .editor-cover strong { font-size: 19px; }
+  .editor-copy h3 { font-size: 23px; }
+  .editor-copy > p:not(.book-category) { font-size: 9px; }
+  .editor-signature { font-size: 8px; margin: 8px 0; }
+  .outline-btn { padding: 8px; gap: 8px; font-size: 8px; }
+  .footer__bottom { gap: 10px; }
+  .footer__bottom p { order: 3; flex-basis: 100%; }
+}
