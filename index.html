@@ -9,29 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="inicio">
 
 
   <div class="announcement">
-    <a href="#">Historias que merecen llegar a tus manos. Envío gratis desde 45 € en la Península. →</a>
+    <a href="#novedades">Historias que merecen llegar a tus manos. Envío gratis desde 45 € en la Península. →</a>
   </div>
 
 
   <header class="header">
-    <a href="#" class="logo">VIÑETA<span class="logo__dot"></span></a>
+    <a href="#inicio" class="logo">VIÑETA<span class="logo__dot"></span></a>
 
-    <form class="search" role="search">
+    <form class="search" role="search" id="site-search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="search" placeholder="Busca tu próxima historia, autor o editorial...">
+      <input id="search-input" type="search" placeholder="Busca tu próxima historia, autor o editorial..." autocomplete="off">
       <kbd>⌘ K</kbd>
     </form>
 
     <div class="header__actions">
-      <a href="#" class="action">
+      <a href="#cuenta" class="action" data-account-link>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
         Mi cuenta
       </a>
-      <a href="#" class="action">
+      <a href="#carrito" class="action" data-cart-toggle>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h14l-1 13H6L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
         Carrito
         <span class="badge">0</span>
@@ -41,14 +41,14 @@
 
   <nav class="nav">
     <ul>
-      <li><a href="#" class="active">Novedades</a></li>
-      <li><a href="#">Cómic europeo</a></li>
-      <li><a href="#">Manga</a></li>
-      <li><a href="#">Superhéroes</a></li>
-      <li><a href="#">Novela gráfica</a></li>
-      <li><a href="#">Infantil y juvenil</a></li>
+      <li><a href="#novedades" class="active" data-filter="all">Novedades</a></li>
+      <li><a href="#novedades" data-filter="comic europeo">Cómic europeo</a></li>
+      <li><a href="#novedades" data-filter="manga">Manga</a></li>
+      <li><a href="#novedades" data-filter="superheroes">Superhéroes</a></li>
+      <li><a href="#novedades" data-filter="novela grafica">Novela gráfica</a></li>
+      <li><a href="#novedades" data-filter="infantil">Infantil y juvenil</a></li>
     </ul>
-    <a href="#" class="nav__criterio">✦ El criterio Viñeta</a>
+    <a href="#criterio" class="nav__criterio">✦ El criterio Viñeta</a>
   </nav>
 
 
@@ -58,8 +58,8 @@
       <h1>Tu próxima<br>obsesión<br>empieza aquí.</h1>
       <p class="hero__lead">Grandes historias, pequeñas editoriales y universos por descubrir. Cómics elegidos con criterio, para leer sin límites.</p>
       <div class="hero__cta">
-        <a href="#" class="btn">Explorar novedades <span>↗</span></a>
-        <a href="#" class="link">No sé por dónde empezar</a>
+        <a href="#novedades" class="btn">Explorar novedades <span>↗</span></a>
+        <a href="#universos" class="link">No sé por dónde empezar</a>
       </div>
     </section>
 
@@ -83,33 +83,36 @@
             <p class="product__meta">Leo Vidal · Ciencia ficción · Tapa dura</p>
           </div>
           <div class="product__buy">
-            <strong>24,00 </strong>
-            <a href="#" class="product__btn" aria-label="Ver producto">↗</a>
+            <strong>24.000 $</strong>
+            <a href="#producto-orbita-cero" class="product__btn" data-product="orbita-cero" aria-label="Ver producto">↗</a>
           </div>
         </div>
       </div>
     </section>
   </main>
-<section class="section new-releases" id="novedades">
+
+
+
+  <section class="section new-releases" id="novedades">
     <div class="section-heading">
       <div>
         <p class="eyebrow"><span></span>RECIÉN SALIDOS DE IMPRENTA</p>
         <h2>Acaban de salir del horno.</h2>
       </div>
-      <a class="text-link" href="#">Ver todas las novedades <span>↗</span></a>
+      <a class="text-link" href="#novedades" data-filter="all">Ver todas las novedades <span>↗</span></a>
     </div>
 
     <div class="filters">
-      <a class="filter is-active" href="#">Todo</a>
-      <a class="filter" href="#">Cómic europeo</a>
-      <a class="filter" href="#">Manga</a>
-      <a class="filter" href="#">Novela gráfica</a>
-      <a class="filter" href="#">Superhéroes</a>
+      <a class="filter is-active" href="#novedades" data-filter="all">Todo</a>
+      <a class="filter" href="#novedades" data-filter="comic europeo">Cómic europeo</a>
+      <a class="filter" href="#novedades" data-filter="manga">Manga</a>
+      <a class="filter" href="#novedades" data-filter="novela grafica">Novela gráfica</a>
+      <a class="filter" href="#novedades" data-filter="superheroes">Superhéroes</a>
     </div>
 
     <div class="book-grid">
-      <article class="book-card">
-        <a href="#" class="book-cover book-cover--orbita">
+      <article class="book-card" data-product-card="orbita-cero">
+        <a href="#producto-orbita-cero" data-product="orbita-cero" class="book-cover book-cover--orbita">
           <span class="cover-label">NOVEDAD</span><span class="heart">♡</span>
           <span class="book-author">LEO VIDAL</span>
           <strong>ÓRBITA<br>CERO</strong>
@@ -117,14 +120,14 @@
         </a>
         <div class="book-info">
           <p class="book-category">CÓMIC EUROPEO</p>
-          <h3><a href="#">Órbita cero, Vol. 1</a></h3>
+          <h3><a href="#producto-orbita-cero" data-product="orbita-cero">Órbita cero, Vol. 1</a></h3>
           <p class="book-meta">Leo Vidal · Ciencia ficción</p>
-          <div class="book-bottom"><strong>24,00 €</strong><a href="#" aria-label="Ver producto">＋</a></div>
+          <div class="book-bottom"><strong>24,00 €</strong><a href="#carrito" data-add-cart="orbita-cero" aria-label="Añadir al carrito">＋</a></div>
         </div>
       </article>
 
-      <article class="book-card">
-        <a href="#" class="book-cover book-cover--garden">
+      <article class="book-card" data-product-card="jardin-dias">
+        <a href="#producto-jardin-dias" data-product="jardin-dias" class="book-cover book-cover--garden">
           <span class="cover-label">NOVEDAD</span><span class="heart">♡</span>
           <span class="garden-sun"></span>
           <strong>EL JARDÍN<br>DE LOS DÍAS</strong>
@@ -132,14 +135,14 @@
         </a>
         <div class="book-info">
           <p class="book-category">NOVELA GRÁFICA</p>
-          <h3><a href="#">El jardín de los días</a></h3>
+          <h3><a href="#producto-jardin-dias" data-product="jardin-dias">El jardín de los días</a></h3>
           <p class="book-meta">Marta Soler · Costumbrismo</p>
-          <div class="book-bottom"><strong>22,50 €</strong><a href="#" aria-label="Ver producto">＋</a></div>
+          <div class="book-bottom"><strong>22,50 €</strong><a href="#carrito" data-add-cart="jardin-dias" aria-label="Añadir al carrito">＋</a></div>
         </div>
       </article>
 
-      <article class="book-card">
-        <a href="#" class="book-cover book-cover--midnight">
+      <article class="book-card" data-product-card="despues-medianoche">
+        <a href="#producto-despues-medianoche" data-product="despues-medianoche" class="book-cover book-cover--midnight">
           <span class="cover-label">NOVEDAD</span><span class="heart">♡</span>
           <span class="midnight-moon"></span>
           <strong>DESPUÉS DE<br>MEDIANOCHE</strong>
@@ -147,14 +150,14 @@
         </a>
         <div class="book-info">
           <p class="book-category">MANGA</p>
-          <h3><a href="#">Después de medianoche</a></h3>
+          <h3><a href="#producto-despues-medianoche" data-product="despues-medianoche">Después de medianoche</a></h3>
           <p class="book-meta">Ren Aoki · Misterio</p>
-          <div class="book-bottom"><strong>26,00 €</strong><a href="#" aria-label="Ver producto">＋</a></div>
+          <div class="book-bottom"><strong>26,00 €</strong><a href="#carrito" data-add-cart="despues-medianoche" aria-label="Añadir al carrito">＋</a></div>
         </div>
       </article>
 
-      <article class="book-card">
-        <a href="#" class="book-cover book-cover--cat">
+      <article class="book-card" data-product-card="gato-nubes">
+        <a href="#producto-gato-nubes" data-product="gato-nubes" class="book-cover book-cover--cat">
           <span class="cover-label">NOVEDAD</span><span class="heart">♡</span>
           <span class="cloud cloud--one"></span><span class="cloud cloud--two"></span>
           <strong>UN GATO EN<br>LAS NUBES</strong>
@@ -162,38 +165,42 @@
         </a>
         <div class="book-info">
           <p class="book-category">INFANTIL Y JUVENIL</p>
-          <h3><a href="#">Un gato en las nubes, T. 1</a></h3>
+          <h3><a href="#producto-gato-nubes" data-product="gato-nubes">Un gato en las nubes, T. 1</a></h3>
           <p class="book-meta">Nora Kim · Aventuras</p>
-          <div class="book-bottom"><strong>9,95 €</strong><a href="#" aria-label="Ver producto">＋</a></div>
+          <div class="book-bottom"><strong>9,95 €</strong><a href="#carrito" data-add-cart="gato-nubes" aria-label="Añadir al carrito">＋</a></div>
         </div>
       </article>
     </div>
   </section>
-<section class="universes" id="universos">
+
+
+  <section class="universes" id="universos">
     <div class="universes__inner">
       <div class="universes__heading">
         <div>
           <p class="eyebrow eyebrow--light"><span></span>HAY UN UNIVERSO PARA CADA PERSONA</p>
           <h2>A cada lector, su universo.</h2>
         </div>
-        <a href="#" class="universe-all">Explora todos los géneros ↗</a>
+        <a href="#novedades" class="universe-all" data-filter="all">Explora todos los géneros ↗</a>
       </div>
       <div class="universe-grid">
-        <a href="#" class="universe-item"><span class="universe-icon">✺</span><h3>Cómic europeo</h3><p>Historias con otra perspectiva.</p><span class="universe-arrow">↗</span></a>
-        <a href="#" class="universe-item"><span class="universe-icon">✳</span><h3>Manga</h3><p>Emociones en cada página.</p><span class="universe-arrow">↗</span></a>
-        <a href="#" class="universe-item"><span class="universe-icon">ϟ</span><h3>Superhéroes</h3><p>Grandes poderes, mejores relatos.</p><span class="universe-arrow">↗</span></a>
-        <a href="#" class="universe-item"><span class="universe-icon">◈</span><h3>Novela gráfica</h3><p>Lecturas que dejan huella.</p><span class="universe-arrow">↗</span></a>
-        <a href="#" class="universe-item"><span class="universe-icon">✷</span><h3>Infantil y juvenil</h3><p>Primeras lecturas, mundos infinitos.</p><span class="universe-arrow">↗</span></a>
+        <a href="#novedades" class="universe-item" data-filter="comic europeo"><span class="universe-icon">✺</span><h3>Cómic europeo</h3><p>Historias con otra perspectiva.</p><span class="universe-arrow">↗</span></a>
+        <a href="#novedades" class="universe-item" data-filter="manga"><span class="universe-icon">✳</span><h3>Manga</h3><p>Emociones en cada página.</p><span class="universe-arrow">↗</span></a>
+        <a href="#novedades" class="universe-item" data-filter="superheroes"><span class="universe-icon">ϟ</span><h3>Superhéroes</h3><p>Grandes poderes, mejores relatos.</p><span class="universe-arrow">↗</span></a>
+        <a href="#novedades" class="universe-item" data-filter="novela grafica"><span class="universe-icon">◈</span><h3>Novela gráfica</h3><p>Lecturas que dejan huella.</p><span class="universe-arrow">↗</span></a>
+        <a href="#novedades" class="universe-item" data-filter="infantil"><span class="universe-icon">✷</span><h3>Infantil y juvenil</h3><p>Primeras lecturas, mundos infinitos.</p><span class="universe-arrow">↗</span></a>
       </div>
     </div>
   </section>
-   <section class="section recommendations" id="criterio">
+
+
+  <section class="section recommendations" id="criterio">
     <div class="section-heading">
       <div>
         <p class="eyebrow"><span></span>UNA SELECCIÓN CON INTENCIÓN</p>
         <h2>Leídos. Releídos. Recomendados.</h2>
       </div>
-      <a class="text-link" href="#">Todas nuestras selecciones <span>↗</span></a>
+      <a class="text-link" href="#criterio">Todas nuestras selecciones <span>↗</span></a>
     </div>
 
     <div class="recommendation-layout">
@@ -208,18 +215,18 @@
           <h3>“Hay historias que no terminan en la última página.”</h3>
           <p>Una novela gráfica delicada y luminosa sobre los recuerdos que cultivamos y las personas que nos acompañan.</p>
           <span class="editor-signature">✦ La mirada Viñeta</span>
-          <a href="#" class="outline-btn">Descubrir el cómic <span>↗</span></a>
+          <a href="#producto-jardin-dias" class="outline-btn" data-product="jardin-dias">Descubrir el cómic <span>↗</span></a>
         </div>
       </article>
 
       <aside class="you-may-like">
         <h3>SI TE GUSTA...</h3>
-        <a href="#" class="mini-recommendation">
+        <a href="#producto-despues-medianoche" class="mini-recommendation" data-product="despues-medianoche">
           <span class="mini-cover mini-cover--red">DESPUÉS<br>DE<br>MEDIANOCHE</span>
           <span class="mini-copy"><small>SI TE GUSTA EL MISTERIO</small><strong>Después de medianoche</strong><em>26,00 €</em></span>
           <span class="mini-arrow">↗</span>
         </a>
-        <a href="#" class="mini-recommendation">
+        <a href="#producto-gato-nubes" class="mini-recommendation" data-product="gato-nubes">
           <span class="mini-cover mini-cover--blue">UN GATO<br>EN LAS<br>NUBES</span>
           <span class="mini-copy"><small>SI BUSCAS ALGO DIFERENTE</small><strong>Un gato en las nubes, T. 1</strong><em>9,95 €</em></span>
           <span class="mini-arrow">↗</span>
@@ -227,7 +234,9 @@
       </aside>
     </div>
   </section>
-<footer class="footer">
+
+
+  <footer class="footer">
     <div class="footer__main">
       <div class="footer__intro">
         <p class="eyebrow eyebrow--light"><span></span>UNA CARTA DESDE NUESTRO UNIVERSO</p>
@@ -244,11 +253,13 @@
       </form>
     </div>
     <div class="footer__bottom">
-      <a href="#" class="logo logo--footer">VIÑETA<span class="logo__dot"></span></a>
+      <a href="#inicio" class="logo logo--footer">VIÑETA<span class="logo__dot"></span></a>
       <p>© 2025 VIÑETA. Historias para mirar el mundo distinto.</p>
-      <div><a href="#">Instagram</a><a href="#">Contacto</a><a href="#">Privacidad</a></div>
+      <div><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:hola@vineta.com">Contacto</a><a href="#privacidad" data-privacy-link>Privacidad</a></div>
     </div>
   </footer>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
 
